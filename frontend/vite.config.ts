@@ -13,6 +13,10 @@ export default defineConfig(({ mode }) => ({
       'Cross-Origin-Embedder-Policy': 'require-corp',
     },
   },
+  preview: {
+    host: true,
+    port: 4173,
+  },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
